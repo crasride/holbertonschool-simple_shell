@@ -15,7 +15,7 @@ int main(void)
 			break;
 
 		buffer[strlen(buffer) - 1] = '\0';
-		printf("[%s]\n", buffer);
+	/*	printf("[%s]\n", buffer); */
 
 		i = 0;
 		flag = 0;
