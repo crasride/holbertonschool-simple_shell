@@ -1,0 +1,53 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<sys/wait.h>
+#include<unistd.h>
+#include<string.h>
+#include<ctype.h>
+#define MAX_NUM 1024
+int main(void)
+{
+	int argv = 0;
+	char *argc[8];
+
+	while (1)
+	{
+		printf("#cisfun$ > ");
+		char buf[MAX_NUM + 1] = {0};
+
+		if( fgets(buf, MAX_NUM, stdin) == NULL)
+			break;
+		buf[strlen(buf)-1] = '\0';
+		printf("[%s]\n",buf);
+
+		int i = 0;
+		int flag = 0;
+
+		argv = 0;
+		for (;buf[i]!='\0';i++)
+		{
+			if (!isspace(buf[i])&&flag==0)
+			{
+				flag = 1;
+				argc[argv++] = buf+i;
+			}
+			else if (isspace(buf[i]))
+			{
+				flag = 0;
+				buf[i] = '\0';
+			}
+			printf("[%c] %d\n", buf[i], flag);
+		}
+		argc[argv] = NULL;
+		for (i = 0; i<argv; i++)
+			printf("argv[%d] = %s\n", i, argc[i]);
+		if (fork()==0)
+		{
+			execvp(argc[0],argc);
+			exit(1);
+		}
+		else
+			wait(NULL);
+	}
+	printf("886\n");
+}
