@@ -13,8 +13,6 @@ int main(void)
 
 	while (1)
 	{
-		printf("#cisfun$ > ");
-		
 		if (fgets(buffer, MAX_NUM, stdin) == NULL)
 			break;
 		buffer[strlen(buffer) - 1] = '\0';
