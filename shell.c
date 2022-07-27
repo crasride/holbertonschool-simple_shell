@@ -40,7 +40,7 @@ int main(void)
 		for (i = 0; i < argv; i++)
 			if (fork() == 0)
 		{
-			execvp(argc[0], argc);
+			execve(argc[0], argc);
 			exit(1);
 		}
 		else
