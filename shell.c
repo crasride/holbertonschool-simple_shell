@@ -33,19 +33,19 @@ int main(void)
 				flag = 0;
 				buffer[i] = '\0';
 			}
-		/*	printf("[%c] %d\n", buffer[i], flag); */
+		/*	printf("[%c] %d\n", buffer[i], flag);   */
 		}
 		argc[argv] = NULL;
 		for (i = 0; i < argv; i++)
-		/*	printf("argv[%d] = %s\n", i, argc[i]); */
+		/*	printf("argv[%d] = %s\n", i, argc[i]);   */
 		if (fork() == 0)
 		{
 			execvp(argc[0], argc);
-	/*		exit(1); */
+	/*		exit(1);     */
 		}
 		else
 			wait(NULL);
 	}
-/*	printf("Thank you for using me!!! Goodbye\n"); */
+/*	printf("Thank you for using me!!! Goodbye\n");   */
 	return  (0);
 }
