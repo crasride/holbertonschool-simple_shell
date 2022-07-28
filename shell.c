@@ -13,6 +13,8 @@ int main(void)
 
 	while (1)
 	{
+		printf("#cisfun$ > ");
+
 		if (fgets(buffer, MAX_NUM, stdin) == NULL)
 			break;
 		buffer[strlen(buffer) - 1] = '\0';
@@ -35,7 +37,7 @@ int main(void)
 			}
 		}
 		argc[argv] = NULL;
-		for (i = 0; i < argv; i++)
+	/*	for (i = 0; i < argv; i++) */
 			if (fork() == 0)
 		{
 			execvp(argc[0], argc);
