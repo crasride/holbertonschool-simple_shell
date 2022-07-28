@@ -13,7 +13,8 @@ int main(void)
 
 	while (1)
 	{
-	/*	printf("#cisfun$ > "); */
+
+	 /*	printf("#cisfun$ > "); */
 
 		if (fgets(buffer, MAX_NUM, stdin) == NULL)
 			break;
