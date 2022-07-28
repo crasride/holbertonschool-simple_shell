@@ -37,10 +37,10 @@ int main(void)
 			}
 		}
 		argc[argv] = NULL;
-		for (i = 0; i < argv; i++)
+	/*	for (i = 0; i < argv; i++) */
 			if (fork() == 0)
 		{
-			execve(argc[0], argc);
+			execvp(argc[0], argc);
 			exit(1);
 		}
 		else
