@@ -34,7 +34,7 @@ int main(void)
 			{
 				flag = 0;
 				buffer[i] = '\0';
-			}
+		}
 		}
 		argc[argv] = NULL;
 	/*	for (i = 0; i < argv; i++) */
