@@ -39,16 +39,15 @@ int main(void)
 			if (fork() == 0)
 			{
 				execvp(argc[0], argc);
-				break;
+				exit(0);
 			}
 			else
 				wait(NULL);
 		}
 		if(strcmp(argc[0], "exit") == 0)
-                  {
-                          printf("Bye\n");
-                          exit(0);
-                  }
+                {
+			exit(0);
+		}
 	}
 	return (0);
 }
