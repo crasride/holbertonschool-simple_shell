@@ -38,7 +38,7 @@ int main(void)
 			}
 		}
 		argc[argv] = NULL;
-	/*	for (i = 0; i < argv; i++) */
+  		for (i = 0; i < argv; i++)
 			if (fork() == 0)
 		{
 			execvp(argc[0], argc);
