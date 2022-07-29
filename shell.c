@@ -35,9 +35,9 @@ int main(void)
 		}
 		argc[argv] = NULL;
 		if (argv)
-    {
+		{
 			if (fork() == 0)
-	  	{
+			{
 				execvp(argc[0], argc);
 				break;
 			}
