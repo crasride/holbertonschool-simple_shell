@@ -8,4 +8,9 @@
 #include<string.h>
 #include<ctype.h>
 
+/* Prototype functions */
+
+int exit_func(void);
+
+
 #endif /*_SIMPLE_SHELL_*/
