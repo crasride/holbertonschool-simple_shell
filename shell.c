@@ -46,6 +46,7 @@ int main(void)
 		}
   		if(strcmp(argc[0], "exit") == 0)
 			exit(0);
+		        exit(2);
 	}
 	return (0);
 }
