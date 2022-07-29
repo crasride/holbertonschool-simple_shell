@@ -44,7 +44,8 @@ int main(void)
 			else
 				wait(NULL);
 		}
-		if(strcmp(argc[0], "exit") == 0)breack;
+		if(strcmp(argc[0], "exit") == 0)
+			break;
 	}
 	return (0);
 }
