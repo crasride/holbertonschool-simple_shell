@@ -44,6 +44,11 @@ int main(void)
 			else
 				wait(NULL);
 		}
+		if(strcmp(argc[0], "exit") == 0)
+                  {
+                          printf("Bye\n");
+                          exit(0);
+                  }
 	}
 	return (0);
 }
