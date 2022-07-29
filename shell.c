@@ -39,13 +39,13 @@ int main(void)
 			if (fork() == 0)
 			{
 				execvp(argc[0], argc);
-				exit(2);
+				/* exit(2); */
 			}
 			else
 				wait(NULL);
 		}
-	/*	if(strcmp(argc[0], "exit") == 2)
-			break; */
+  		if(strcmp(argc[0], "exit") == 2)
+			break;
 	}
 	return (0);
 }
