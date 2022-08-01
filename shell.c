@@ -45,7 +45,7 @@ int main(void)
 				wait(NULL);
 		}
   		if(strcmp(argc[0], "exit") == 0)
-			  exit(127);
+			  exit(2);
 	}
 	return (0);
 }
