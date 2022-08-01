@@ -283,7 +283,7 @@ You are not allowed to use strtok
 
 ## Authors✒️ 
 
-* **José Fermandez Armas** -[FERNANDES ARMAS](4990@holbertonstudents.com)
+* **José Fermandez Armas [FERNANDES ARMAS]**- (4990@holbertonstudents.com)
 * **Sébastien Jonad [JONAD]**- (5151@holbertonstudents.com)
 
 
