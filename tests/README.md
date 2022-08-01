@@ -1,3 +1,4 @@
+# README 
 Does the README have a valid description of the shell?
 
 The README should explain the following:
@@ -7,7 +8,7 @@ The README should explain the following:
 
 
 
-THE SHELL
+## THE SHELL
 
 The Unix Shell is a command line interpreter (C.L.I), providing a command line user interface. The user uses the keyboard, to type some commands into the operating system. Basically, a shell does have three steps:
 
@@ -21,10 +22,12 @@ The Unix Shell is a command line interpreter (C.L.I), providing a command line u
     In this last step, all the commands have been executed, this is the last step before the end of the program, therefore any memory storage is going to be freed, and the shell will be terminated.
 
 
-COMPILATION
+## COMPILATION
 
 Shell will be compiled this way:
+```gcc
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+```
 Execute
 
 To execute commands, the shell uses a prompt. 
@@ -37,7 +40,7 @@ ls, ls -l, ls -l /tmp, pwd, can be passed to improve the efficiency of our simpl
 To exit the simple_shell program, type in, exit, or ctrl + D.
 
 
-Valgrind Memcheck
+### Valgrind Memcheck
 
 Valgrind is a memory management checker, it will be used to analyze the memory allocation bugs.
 
@@ -46,36 +49,36 @@ Valgrind is a memory management checker, it will be used to analyze the memory a
     •	And memory errors are more sensitive situations and must be solved in a short time.
     Because a lack of memory allocation size can generate a loss of information, linked to the use of uninitialized memory or Reading/Writing memory after it has been freed or Reading/Writing off the end of malloc used. (https://en.wikipedia.org/wiki/Valgrind).
 
-How to install valgind
+### How to install valgind🔧
 
     sudo apt install valgind
 
     how to run valgrind
-
+```valgrind
         --leak-check=full (show details about the leaks)
         --show-leak-kinds=all (full report about the leaks)
         --track-origins=yes (find origin of uninitialized values)
         --verbose (Give informations about unusual behavoir of the program)
         --log-file=valgind-out.txt (To write a file)
+```
 
 
-
-HSH
+### HSH
 
 We will use HSH, the Haskell shell infrastructure.
 HSH will be used for testing purposes, in interactive mode, and non-interactive mode.
 
 shell should work like this in interactive mode:
-
+```hsh
 $ ./hsh
 ($) /bin/ls
 hsh main.c shell.c
 ($)
 ($) exit
 $
-
+```
 in non-interactive mode:
-
+```hsh
 $ echo "/bin/ls" | ./hsh
 hsh main.c shell.c test_ls_2
 $
@@ -87,8 +90,8 @@ $ cat test_ls_2 | ./hsh
 hsh main.c shell.c test_ls_2
 hsh main.c shell.c test_ls_2
 $
-
-FUNCTIONS USED IN THIS PROGRAM
+```
+## FUNCTIONS USED IN THIS PROGRAM
 
 _putchar.c
 
@@ -109,16 +112,16 @@ int exit_func(void);
 
 Tasks
 
-0. README, man, AUTHORS
+### 0. README, man, AUTHORS
 •	Write a README
 •	Write a man for your shell.
 •	You should have an AUTHORS file at the root of your repository, listing all individuals have contributed content to the repository. Format, see Docker
 
-1. Betty would be proud
+### 1. Betty would be proud
 
 Write a beautiful code that passes the Betty checks
 
-2. Simple shell 0.1
+### 2. Simple shell 0.1
 
 Write a UNIX command line interpreter.
 •	Usage: simple_shell
@@ -159,12 +162,12 @@ env-environ.c  exec    fork    mypid   ppid   printenv  promptc  shell     stat 
 #cisfun$ julien@ubuntu:~/shell$
 
 
-3. Simple shell 0.2
+### 3. Simple shell 0.2
 Simple shell 0.1 +
 •	Handle command lines with arguments
 
 
-4. Simple shell 0.3
+### 4. Simple shell 0.3
 Simple shell 0.2 +
 •	Handle the PATH
 •	fork must not be called if the command doesn’t exist
@@ -185,7 +188,7 @@ drwx------ 3 root   root   4096 Dec  5 12:07 systemd-private-062a0eca7f2a4434973
 :) ^C
 julien@ubuntu:~/shell$ 
 
-5. Simple shell 0.4
+### 5. Simple shell 0.4
 
 Simple shell 0.3 +
 •	Implement the exit built-in, that exits the shell
@@ -193,7 +196,7 @@ Simple shell 0.3 +
 •	You don’t have to handle any argument to the built-in exit
 
 
-6. Simple shell 1.0
+### 6. Simple shell 1.0
 Simple shell 0.4 +
 •	Implement the env built-in, that prints the current environment
 julien@ubuntu:~/shell$ ./simple_shell
@@ -214,7 +217,7 @@ $ exit
 julien@ubuntu:~/shell$ 
 
 
-7. What happens when you type `ls -l *.c` in the shell
+### 7. What happens when you type `ls -l *.c` in the shell
 
 Write a blog post describing step by step what happens when you type ls -l *.c and hit Enter in a shell. Try to explain every step you know of, going in as much details as you can, give examples and draw diagrams when needed. You should merge your previous knowledge of the shell with the specifics of how it works under the hoods (including syscalls).
 •	Have at least one picture, at the top of the blog post
@@ -226,7 +229,7 @@ Write a blog post describing step by step what happens when you type ls -l *.c a
 When done, please add all urls below (blog post, LinkedIn post, etc.)
 
 
-8. Test suite
+### 8. Test suite
 #advanced
 Contribute to a test suite for your shell.
 
@@ -248,7 +251,7 @@ If you choose to use this code, make sure to update the style accordingly
 You should have an AUTHORS file, listing all individuals having contributed content to the repository. Format, see Docker
 Go teams!
 
-9. Simple shell 0.1.1
+### 9. Simple shell 0.1.1
 #advanced
 Simple shell 0.1 +
 
@@ -261,7 +264,7 @@ You don’t have to:
 be able to move the cursor
 
 
-10. Simple shell 0.2.1
+### 10. Simple shell 0.2.1
 #advanced
 Simple shell 0.2 +
 
@@ -269,19 +272,19 @@ You are not allowed to use strtok
 
 
 
-SEE ALSO:
+## SEE ALSO:
 
-HSH at: https://hackage.haskell.org/package/HSH-2.1.3/docs/HSH.html
-Linux man page at: https://linux.die.net/man/1/sh
-wikipedia Shell Unix at: https://fr.wikipedia.org/wiki/Shell_Unix
-Ubuntu manual at: https://manpages.ubuntu.com/manpages/impish/en/man1/ls.1plan9.html
+* **HSH at:[hsh] https://hackage.haskell.org/package/HSH-2.1.3/docs/HSH.html
+* **Linux man page at: [linux]  https://linux.die.net/man/1/sh
+* **## wikipedia 📖  Shell Unix at:[wiki] https://fr.wikipedia.org/wiki/Shell_Unix
+* **Ubuntu manual at: [ubuntu] https://manpages.ubuntu.com/manpages/impish/en/man1/ls.1plan9.html
 
 
 
-Authors
+## Authors✒️ 
 
-José Fermandez Armas 4990@holbertonstudents.com
-Sébastien Jonad 5151@holbertonstudents.com
+* **José Fermandez Armas** -[FERNANDES ARMAS](4990@holbertonstudents.com)
+* **Sébastien Jonad [JONAD]**- (5151@holbertonstudents.com)
 
 
 
