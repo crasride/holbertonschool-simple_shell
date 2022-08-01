@@ -1,5 +1,4 @@
 #include "shell.h"
-
 #define MAX_NUM 1024
 /**
 * main - function
@@ -13,9 +12,6 @@ int main(void)
 
 	while (1)
 	{
-
-	 /*	printf("#cisfun$ > "); */
-
 		if (fgets(buffer, MAX_NUM, stdin) == NULL)
 			break;
 		buffer[strlen(buffer) - 1] = '\0';
@@ -38,14 +34,18 @@ int main(void)
 			}
 		}
 		argc[argv] = NULL;
-	/*	for (i = 0; i < argv; i++) */
-			if (fork() == 0)
+		if (argv)
 		{
-			execvp(argc[0], argc);
-			exit(1);
+			if (fork() == 0)
+			{
+				execvp(argc[0], argc);
+				 exit(0);
+			}
+			else
+				wait(NULL);
 		}
-		else
-			wait(NULL);
+  		if(strcmp(argc[0], "exit") == 0)
+			  exit(2);
 	}
 	return (0);
 }
