@@ -1,0 +1,92 @@
+.\" Process this file with
+.\" groff -man -Tascii
+.\"
+.TH "SIMPLE SHELL  HOLBERTONSCHOOL" "#C18-LAVAL July 2022"
+.\"Manpage of the simle_shell"
+.\" Contact 5151@holbertonstudents.com or 4990@holbertonstudents.com to correct errors or typos."
+.SH NAME
+SIMPLE SHELL
+
+.PP
+.B simple_shell man page
+.SH SYNOPSIS
+.B
+#include "shell.h"
+
+simple_shell [option...] [arguments ...]
+
+.SH DESCRIPTION
+.B
+The simple_shell is a shell based program,that uses a command line interface(CLI).
+The users inputs datas(human-readable),using the keyboard interface. 
+Then the progam reads, converts, compiles,and executes the commands in a standard output.
+
+
+.SH EXAMPLES FOR STANDARD INPUT COMMANDS
+
+.TS
+center box tab(#);
+l s s 
+r | c c.
+STANDARD INPUT LISTS
+_
+ls#list directory contents.
+_
+ls -l#List in long format file system type.
+_
+pwd# will display the present working directory.
+_
+rm# will remove a file.
+_
+mv# will move or rename one or more files or directories.
+_
+cp# Will copy SOURCE to DEST.
+_
+exit# cause normal process termination.
+_
+ctrl + d, ctrl + c# stop the prompt input.
+.TE
+
+.SH RETURN VALUE
+.B
+If the program succed the return value is 0. 
+If there is an issue,(end of the child process),an error message is displayed.
+A new prompt is returning by the simple_shell process.
+
+.SH EXIT STATUS
+.B
+In interactive mode, to exit the simple_shell usethis commands: [CTRL + D] or [CTRL + C].
+Else, you have nothing to do, the execution will be aborded.
+
+.SH BUILTINS
+.B
+.TS
+center box tab(|);
+l  s  S 
+r | r  c .
+BUILTINS LISTS
+_
+gets()| reads a line from the specified stream and stores it into the string pointer to by str.
+_
+isspace()| checks whether a character is a white-space character or not.
+_
+strlen()| function calculates the length of a given string.
+_
+fork()| Fork system call is used for creating a new process, which is called child process.
+_
+execvp()| function duplicate the actions.
+_
+exit()| used to instantly end the calling process.
+_
+wait()| system call suspends execution of the calling thread until one of its children terminates.
+.TE
+
+
+.SH SEE ALSO
+wikipedia Shell Unix at: <https://fr.wikipedia.org/wiki/Shell_Unix>
+
+Ubuntu manual at: <https://manpages.ubuntu.com/manpages/impish/en/man1/ls.1plan9.html>
+
+.SH AUTHORS
+Jose Fernandez Armas & Sebastien Jonad
+                                        
