@@ -39,7 +39,7 @@ int main(void)
 			if (fork() == 0)
 			{
 				execvp(argc[0], argc);
-				/* exit(0); */
+				exit(0);
 			}
 			else
 				wait(NULL);
