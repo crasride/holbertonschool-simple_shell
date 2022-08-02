@@ -42,8 +42,7 @@ int main(void)
 				break;
 			}
 			else
-				wait(NULL);
-				 
+				wait(NULL);				 
 		}
 	    	if (strcmp(argc[0], "exit") == 0) 
 	     		return 2;
