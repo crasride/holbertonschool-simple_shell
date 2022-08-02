@@ -42,14 +42,10 @@ int main(void)
 				return (2);
 			}
 			else
-<<<<<<< HEAD
 				wait(NULL);
-=======
-				wait(NULL);				 
->>>>>>> 002e59e915c305b8594f5284998e203805a4dcc7
 		}
-	    	if (strcmp(argc[0], "exit") == 0) 
-	     		return (2);
+		if (strcmp(argc[0], "exit") == 0)
+			return (2);
 	}
 	return (0);
 }
