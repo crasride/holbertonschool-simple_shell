@@ -1,8 +1,8 @@
 #include "shell.h"
 #define MAX_NUM 1024
 /**
-* main - function
-* Return: dksjkgfdg
+* main - Function
+* Return: 0
 */
 int main(void)
 {
@@ -43,7 +43,10 @@ int main(void)
 			}
 			else
 				wait(NULL);
+				 
 		}
+	    	if (strcmp(argc[0], "exit") == 0) 
+	     		return 2;
 	}
 	return (0);
 }
