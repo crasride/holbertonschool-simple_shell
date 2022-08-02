@@ -1,0 +1,59 @@
+.TH simple_shell 1 "5 December 2021" "1.0" "simple_shell man page"
+.SH NAME
+simple_shell \- command interpreter
+.SH SYNOPSIS
+\fB #include <simpleshell.h>
+
+\fB simple_shell [option_name] [argument ...]
+.SH DESCRITION
+
+
+.SH INVOCATION
+
+
+.SH LEXICAL STRUCTURE
+
+.SH EXAMPLE STANDARD INPUT
+.TS
+center box tab(#);
+c | c.
+
+ls # display list directory contents
+_
+ls -l # display ls with a long format
+_
+pwd # print name of current working directory
+_
+cp # copy files and directories
+_
+mv # move or rename file/directory
+
+.TE
+
+.SH RETURN VALUE
+If successful return, the simple_shell return a 0.
+If an error appened (command incorrectly or doesn't exist in the $PATH), the simple_shell exit out of the child process, display an error message and return with a new prompt. At the end, a new child process began.
+
+.SH EXIT STATUS
+If the Simple Shell is not an interactive shell, the execution of the shell file will be aborted. Otherwise, the Simple Shell will exit whith the [CTRL + D] command or with the exit builtin.
+
+.SH BUILTINS
+.TS
+allbox tab(|);
+c s c.
+help | simple_shell display help section
+env | simple_shell prints the current environment to standard output
+exit | simple_shell exits out of the simple_shell program
+.TE
+
+.SH SEE ALSO
+
+
+.PP
+
+.SH AUTHORS
+
+
+.SH COPYRIGHT
+
+©Holberton School Laval
