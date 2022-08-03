@@ -27,7 +27,7 @@ Then the progam reads, converts, compiles,and executes the commands in a standar
 .TS
 center box tab(#);
 l s s 
-r | c c.
+r | r c.
 STANDARD INPUT LISTS
 _
 ls#list directory contents.
@@ -62,7 +62,7 @@ Else, you have nothing to do, the execution will be aborded.
 .B
 .TS
 center box tab(|);
-l  s  S 
+l  s  s 
 r | r  c .
 BUILTINS LISTS
 _
