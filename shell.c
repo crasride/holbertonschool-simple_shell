@@ -13,12 +13,10 @@ int main(void)
 	while (1)
 	{
 		if (fgets(buffer, MAX_NUM, stdin) == NULL)
-			return (2);
+			break;
 		buffer[strlen(buffer) - 1] = '\0';
 
-		i = 0;
-		flag = 0;
-		argv = 0;
+		i = 0, flag = 0, argv = 0;
 
 		for (; buffer[i] != '\0' ; i++)
 		{
@@ -39,7 +37,6 @@ int main(void)
 			if (fork() == 0)
 			{
 				execvp(argc[0], argc);
-				return (2);
 			}
 			else
 				wait(NULL);
