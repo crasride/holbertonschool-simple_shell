@@ -43,7 +43,7 @@ int main(void)
 				wait(NULL);
 		}
 		if (strcmp(argc[0], "exit") == 0)
-			return (0);
+			exit(2);
 	}
 	return (0);
 }
