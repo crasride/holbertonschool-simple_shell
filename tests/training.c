@@ -11,7 +11,7 @@ int main(void)
         char buffer[MAX_NUM + 1] = {0}; // definition de la taille du buffer 1024 + 1.
         int i, flag, argv; // declarations de 3 variables de type integer.
 
-        while (1) // Tant que c'est vrai.
+        while (1) // Tant que la condition est vrai.
         {
                 if (fgets(buffer, MAX_NUM, stdin) == NULL) // Si valeur entrer au clavier vaut NULL. 
                         break; // arret programme
