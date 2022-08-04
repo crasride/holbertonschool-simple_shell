@@ -3,7 +3,7 @@
 #define MAX_NUM 1024 // definie la taille maximale
 /**
 * main - function
-* Return: dksjkgfdg
+* Return: ....
 */
 int main(void)
 {
