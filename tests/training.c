@@ -45,7 +45,7 @@ int main(void)
                         wait(NULL); // attend
         }
         if (strcmp(argc[0], "exit") == 0) // compare la string.
-                return (0); // 
+                return (0); // quitte le programme 
         }
         return (0); // 
 }
