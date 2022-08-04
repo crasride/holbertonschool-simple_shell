@@ -11,7 +11,7 @@ int main(void)
         char buffer[MAX_NUM + 1] = {0}; // definition de la taille du buffer 1024 + 1.
         int i, flag, argv; // declarations de 3 variables de type integer.
 
-        while (1) // Tant que c'est vrai.
+        while (1) // Tant que la condition est vrai.
         {
                 if (fgets(buffer, MAX_NUM, stdin) == NULL) // Si valeur entrer au clavier vaut NULL. 
                         break; // arret programme
@@ -21,12 +21,12 @@ int main(void)
 
                 for (; buffer[i] != '\0' ; i++) // tant que l'index du buffer ne renvoit pas fin de ligne, incrementer.
                 {
-                        if (!isspace(buffer[i]) && flag == 0) //La fonction isspace() vérifie si un caractère n'est pas un espace blanc ou non.
+                        if (!isspace(buffer[i]) && flag == 0) //La fonction isspace() vérifie si un caractère n'est pas un espace blanc ou non.tokenise la variable.
                         {
                                 flag = 1;
                                 argc[argv++] = buffer + i;// trouve le pointer, incremente sa valeur.
                         }
-                        else if (isspace(buffer[i]))  //La fonction isspace() vérifie si un caractère est un espace blanc ou non.
+                        else if (isspace(buffer[i]))  //La fonction isspace() vérifie si un caractère est un espace blanc ou non.Tokenise la variable.
                         {
                                 flag = 0;
                                 buffer[i] = '\0'; // trouve fin de ligne.
@@ -38,15 +38,15 @@ int main(void)
 
                 if (fork() == 0) // divise le child
                 {
-                        execvp(argc[0], argc); // 
+                        execvp(argc[0], argc); //recherche un nouveau processus image
                         exit(0); // quitte le programme.
                 }
                 else
                         wait(NULL); // attend
         }
         if (strcmp(argc[0], "exit") == 0) // compare la string.
-                return (0); // 
+                return (0); // quitte le programme 
         }
-        return (0); // 
+        return (0); // quitte le programme 
 }
 
