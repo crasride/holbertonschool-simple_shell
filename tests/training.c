@@ -38,7 +38,7 @@ int main(void)
 
                 if (fork() == 0) // divise le child
                 {
-                        execvp(argc[0], argc); // 
+                        execvp(argc[0], argc); //recherche un nouveau processus image
                         exit(0); // quitte le programme.
                 }
                 else
