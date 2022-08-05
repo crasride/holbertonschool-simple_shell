@@ -78,7 +78,7 @@ To exit the simple_shell program, type in:
 
 We will use HSH, the Haskell shell infrastructure.
 HSH will be used for testing purposes, in interactive mode, and non-interactive mode.
-shell should work like thi:
+shell should work like this:
 #####   in interactive mode:
 ```hsh
 $ ./hsh
