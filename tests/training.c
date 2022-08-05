@@ -23,12 +23,12 @@ int main(void)
                 {
                         if (!isspace(buffer[i]) && flag == 0) //La fonction isspace() vérifie si un caractère n'est pas un espace blanc ou non.tokenise la variable.
                         {
-                                flag = 1;
+                                flag = 1; //si vaut 1.
                                 argc[argv++] = buffer + i;// trouve le pointer, incremente sa valeur.
                         }
                         else if (isspace(buffer[i]))  //La fonction isspace() vérifie si un caractère est un espace blanc ou non.Tokenise la variable.
                         {
-                                flag = 0;
+                                flag = 0;// si vaut 0.
                                 buffer[i] = '\0'; // trouve fin de ligne.
                         }
                 }
