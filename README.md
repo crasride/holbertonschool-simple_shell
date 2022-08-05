@@ -124,7 +124,7 @@ $
 ```
 ## Builtins 🔬
 
-##### gets()
+##### fgets()
 ###### char *fgets (char *string, int n, FILE *stream);
 >/* reads a line from the specified stream and stores it into the string pointer to by str */
 
