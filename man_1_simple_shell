@@ -66,7 +66,7 @@ l  s  s
 r | r  c .
 BUILTINS LISTS
 _
-gets()| reads a line from the specified stream and stores it into the string pointer to by str.
+fgets()| reads a line from the specified stream and stores it into the string pointer to by str.
 _
 isspace()| checks whether a character is a white-space character or not.
 _
