@@ -343,6 +343,11 @@ Simple shell 0.2 +
 
 You are not allowed to use strtok
 
+MAN PAGE
+
+![Capture d’écran 2022-08-04 à 16 42 46](https://user-images.githubusercontent.com/105843973/183026488-2f3f9448-4636-47f9-939b-2a6ae1cc3d4e.png)
+
+
 
 
 ## SEE ALSO:📌
